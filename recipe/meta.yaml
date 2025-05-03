@@ -1,13 +1,14 @@
 {% set name = "jaxtyping" %}
-{% set version = "0.2.36" %}
+{% set version = "0.3.2" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jaxtyping-{{ version }}.tar.gz
-  sha256: 781ac44a3cf8982063d7ee48b5008ccfad7b13793bf878eb3058d5319aa08f0f
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jaxtyping-{{ version }}.tar.gz
+  sha256: f30483fac4b42e915db8ad2414a85c3b63284aa7d3c100b96b59f755cf4a86ad
 
 build:
   noarch: python
@@ -16,12 +17,12 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}.*
     - pip
     - hatchling
   run:
-    - python >=3.9
-    - typeguard ==2.13.3
+    - python >={{ python_min }}
+    - wadler-lindig >=0.1.3
 
 test:
   imports:
@@ -30,6 +31,7 @@ test:
     - pip check
   requires:
     - pip
+    - python >={{ python_min }}
 
 about:
   home: https://github.com/google/jaxtyping
@@ -41,3 +43,4 @@ extra:
   recipe-maintainers:
     - asford
     - ngam
+    - iamthebot
