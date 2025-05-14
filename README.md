@@ -144,5 +144,6 @@ Feedstock Maintainers
 =====================
 
 * [@asford](https://github.com/asford/)
+* [@iamthebot](https://github.com/iamthebot/)
 * [@ngam](https://github.com/ngam/)
 
