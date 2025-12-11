@@ -1,5 +1,5 @@
 {% set name = "jaxtyping" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jaxtyping-{{ version }}.tar.gz
-  sha256: f30483fac4b42e915db8ad2414a85c3b63284aa7d3c100b96b59f755cf4a86ad
+  sha256: 8003cfd16ba2ad9b47fdda1d982a575299a81ddfc7997ad0e917c87a0897ea86
 
 build:
   noarch: python
