@@ -1,6 +1,6 @@
 {% set name = "jaxtyping" %}
 {% set version = "0.3.11" %}
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -31,7 +31,7 @@ test:
     - pip check
   requires:
     - pip
-    - python >={{ python_min }}
+    - python {{ python_min }}
 
 about:
   home: https://github.com/google/jaxtyping
